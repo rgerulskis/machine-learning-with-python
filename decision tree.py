@@ -12,6 +12,8 @@ x = df[x_titles].values
 #categorical variables need to be converted to numerical
 from sklearn import preprocessing
 
+#the following block generalizes preprocessing to any file via iteration
+#the rest of the file should be pretty identical to the lab
 for colNum in range(x.shape[1]):
     values = []
     if type(x[:,colNum][0]) not in [int, float]:
